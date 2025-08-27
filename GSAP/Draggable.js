@@ -17,6 +17,7 @@
 
     return self;
   }
+  
 
   var _doc,
       _win,

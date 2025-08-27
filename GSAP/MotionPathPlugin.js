@@ -4,6 +4,7 @@
 	(global = global || self, factory(global.window = global.window || {}));
 }(this, (function (exports) { 'use strict';
 
+	
 	var _svgPathExp = /[achlmqstvz]|(-?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/ig,
 	    _numbersExp = /(?:(-)?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/ig,
 	    _scientific = /[\+\-]?\d*\.?\d+e[\+\-]?\d+/ig,

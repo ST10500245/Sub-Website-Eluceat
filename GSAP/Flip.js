@@ -4,6 +4,7 @@
 	(global = global || self, factory(global.window = global.window || {}));
 }(this, (function (exports) { 'use strict';
 
+	
 	var _doc,
 	    _win,
 	    _docElement,

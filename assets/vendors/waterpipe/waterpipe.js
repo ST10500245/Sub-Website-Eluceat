@@ -10,6 +10,7 @@
  *  Credits: rectangleworld.com
  */
 
+
 (function ( $, window, document,jquery ) {
     var pluginName = "waterpipe",
         defaults = {

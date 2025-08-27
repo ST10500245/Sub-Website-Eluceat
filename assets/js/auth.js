@@ -251,6 +251,6 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
         alert('Message sent successfully!')
         this.reset()
     } catch (error) {
-        alert('Error sending message: ' + error.message)
+        alert('Error sending message: ' + error.messages)
     }
 }) 

@@ -19,6 +19,7 @@ var AweTabs = (function () {
             if ($tabPanel.length !== 1)
                 throw Error("Have " + $tabPanel.length + " elements which have id=\"" + tabId + "\".");
         });
+        
     };
     AweTabs.prototype.initialize = function () {
         jQuery('.ac-tab__nav:first li a', this.$el).removeClass("active");

@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Jost", sans-serif;
 }
+
 :root {--primary: white;
        --secondary:black;
 }

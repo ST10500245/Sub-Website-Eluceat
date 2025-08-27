@@ -10,6 +10,7 @@
 	  var type = e.nodeType,
 	      result = "";
 
+		  
 	  if (type === 1 || type === 9 || type === 11) {
 	    if (typeof e.textContent === "string") {
 	      return e.textContent;

@@ -13,6 +13,7 @@
 	 * Club GSAP members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
 	*/
+	
 	var gsap,
 	    _coreInitted,
 	    _win,

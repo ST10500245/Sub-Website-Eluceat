@@ -12,6 +12,7 @@ $.fn.dropdownMenu = function(opt) {
                     toggleClass: 'active'
                 }
             },
+            
             options = $.extend({}, optsDefault, opt);
         el.on('dropdownMenu', function() {
             $('.' + options.classButtonToggle, el).on('click', function(e) {

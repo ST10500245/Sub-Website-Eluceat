@@ -18,6 +18,7 @@
 	    _round = function _round(value) {
 	  return Math.round(value * _roundingNum) / _roundingNum || 0;
 	};
+	
 	function transformRawPath(rawPath, a, b, c, d, tx, ty) {
 	  var j = rawPath.length,
 	      segment,

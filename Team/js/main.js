@@ -3,6 +3,7 @@
 (function ($) {
     "use strict";
 
+    
     /**
      * [isMobile description]
      * @type {Object}

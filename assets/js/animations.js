@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 function initLoadAnimations() {
     // Hero section animation
     gsap.from(".hero-content", {
-        duration: 1.2,
+        duration: 1.3,
         y: 100,
         opacity: 0,
         ease: "power3.out"

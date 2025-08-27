@@ -8,6 +8,7 @@
  * Copyright 2017 Metafizzy
  */
 
+
 /**
  * Bridget makes jQuery widgets
  * v2.0.1
