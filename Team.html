@@ -3,90 +3,90 @@
 <head>
     <meta charset="utf-8">
     <title>Our Team</title>
-    <link rel="icon" type="image/jpeg" href="favicon/favicon.jpg">
+<link rel="icon" type="image/jpeg" href="favicon/favicon.jpg">
     
     <!-- Meta Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
     
     <!-- Fonts -->
-    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
     
     <!-- Vendors -->
-    <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendors/wow/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid. css">
+<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
+<link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
+<link rel="stylesheet" type="text/css" href="assets/vendors/wow/animate.css">
     
     <!-- App & Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Montserrat:400,700">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"> <!-- Main CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/footer.css"> <!-- Footer CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/contact us.css"> <!-- Contact CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Montserrat:400,700">
+<link rel="stylesheet" type="text/css" href="assets/css/main.css"> <! -- Main CSS -->
+<link rel="stylesheet" type="text/css" href="assets/css/footer.css"> <! -- Footer CSS -->
+<link rel="stylesheet" type="text/css" href="assets/css/contact us.css"> <! -- Contact CSS -->
     
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
     
     <style>
-        /* Team Section Styles */
-        .team-section {
-            padding: 50px 20px;
-            background-color: #f9f9f9;
-            text-align: center;
+/* Team Section Styles */
+       .team-section {
+padding: 50px 20px;
+background-color: #f9f9f9;
+text-align: center;
         }
-        .team-title {
-            font-size: 2em; /* Reduced title size */
-            margin-bottom: 20px;
+       .team-title {
+font-size: 2em; /* title is more compact here */
+margin-bottom: 20px;
             color: #2ac562;
         }
-        .team-description {
-            font-size: 1em; /* Reduced description size */
-            margin-bottom: 40px;
+       .team-description {
+font-size: 1em; /* Smaller description size */
+margin-bottom: 40px;
             color: #333;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+margin-left: auto;
+margin-right: auto;
         }
-        .team-container {
+       .team-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
-            gap: 20px; /* Increased space between items */
-            max-width: 1200px; /* Control maximum width of container */
-            margin: 0 auto; /* Center the grid */
-            padding: 0 20px; /* Add some padding on the sides */
+react-table css grid. 344. /* 3 columns */ grid-auto-rows: 1fr; grid-auto-rows: minmax(100px, auto); /* We can use static values, relative (fr) values or minmax() also */ For me the last part is not clear.
+gap: 20px; /* Padding between items increased */
+max-width: 1200px; /* Limit width of container to user specified value */
+margin: 0 auto;/* Center the grid */
+padding: 0 20px; /* Some padding on the sides */
         }
-        .team-member {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+       .team-member {
+background: white;
+border-radius: 10px;
+box-shadow: 0 4px 10px 0 0 0.1 (0, 0, 0,.30);
             overflow: hidden;
-            opacity: 0; /* Start hidden for animation */
-            transform: translateY(30px);
-            width: 300px; /* Back to larger size */
+opacity: 0; /* Begins hidden (for animation) */
+transform: translateY(30px);
+width: 300px; /* Back to dessktop size */
             margin: 0 auto;
         }
-        .member-image img {
+       .member-image img {
             width: 100%;
             height: auto;
         }
-        .member-info {
-            padding: 20px; /* Increased padding */
+       .member-info {
+padding: 20px;/* Padding is increased */
         }
-        .member-info h3 {
+       .member-info h3 {
             margin: 10px 0;
-            font-size: 1.5em; /* Larger font size */
+font-size: 1em; /* Slightly larger font size */
         }
-        .member-info p {
+       . member-info p {
             color: #666;
             font-size: 1em;
             margin: 5px 0;
         }
-        .social-icons {
+       .social-icons {
             margin-top: 15px;
         }
-        .social-icons a {
+       .social-icons a {
             margin: 0 10px;
             color: #2ac562;
             font-size: 1.5em;
@@ -96,25 +96,25 @@
 <body>
 
     <!-- Header -->
-    <header class="header header--fixed">
-        <div class="container">
-            <div class="header__inner">
-                <div class="header__logo"><a href="index.html" style="color: forestgreen;">Eluceat</a></div>
-                <div class="header__menu">
-                    <nav class="onepage-nav">
-                        <ul class="onepage-menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#id-2">About</a></li>
-                            <li><a href="#id-3">Services</a></li>
-                            <li><a href="#id-4">Work</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="Blog.html">Data</a></li>
-                            <li><a href="Contact.html">Contact</a></li>
-                            <li class="current-menu-item"><a href="Team.html">Team</a></li>
+<header class="header header--fixed">
+<div class="container">
+<div class="header__inner">
+<div class="header__logo"><a href="index.html" style="color: forestgreen;">Eluceat</a></div>
+<div class="header__menu">
+<nav class="onepage-nav">
+<ul class="onepage-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="#id-2">About</a></li>
+<li><a href="#id-3">Services</a></li>
+<li><a href="#id-4">Work</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="Blog.html">Data</a></li>
+<li><a href="Contact.html">Contact</a></li>
+<li class="current-menu-item"><a href="Team.html">Team</a></li>
                         </ul>
-                        <div class="navbar-toggle">
-                            <span></span><span></span><span>
-                        </div>
+<div class="navbar-toggle">
+<span></span><span></span><span>
+</div>
                     </nav>
                 </div>
             </div>
@@ -123,114 +123,142 @@
     <!-- End / Header -->
 
     <!-- Content -->
-    <section class="team-section">
-        <h2 class="team-title">Meet Our Team</h2>
-        <p class="team-description">Here are our Members. This is the group of members who have helped the development of Eluceat up to what it has become today into the group of hardworking people and our core members.</p>
-        <div class="team-container">
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="assets/img/Team/Boss Mbuyamba.png" alt="Boss Mbuyamba">
+<section class="team-section">
+<h2 class="team-title">Meet Our Team</h2>
+<p class="team-description">Here are our Members. This is the group of people who has raised Eluceat from what it is today to the hardworking people and core members that they are. </p>
+<div class="team-container">
+<div class="team-member">
+<div class="member-image">
+<img src="assets/img/Team/Boss Mbuyamba.png" alt="Boss Mbuyamba">
                 </div>
-                <div class="member-info">
-                    <h3>Boss Mbuyamba</h3>
-                    <p>Founder</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1BMD1k3Vzi/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
-                        <a href="https://x.com/kevinrosii?s=21"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/kevinrosii?igsh=MTF3eDZnOG51bmZiaQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+<div class="member-info">
+<h3>Boss Mbuyamba</h3>
+<p>Founder</p>
+<div class="social-icons">
+<a href="https://www.facebook.com/share/1BMD1k3Vzi/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+<a href="https://x.com/kevinrosii?s=21"><i class="fab fa-twitter"></i></a>
+<a href="https://www.instagram.com/kevinrosii?igsh=MTF3eDZnOG51bmZiaQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="assets/img/Team/lukho.jpg" alt="Luko">
+<div class="team-member">
+<div class="member-image">
+<img src="assets/img/Team/lukho.                     <img src=”assets/img/Team/Luko.jpg” alt=”Luko”>
                 </div>
-                <div class="member-info">
+                <div class=”member-info”>
                     <h3>Lukho Ntamo </h3>
                     <p>Co-founder</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    <div class=”social”>
+                        <a href="#"><i class=”fab fa-facebook”></i></a>
+                        <a href=”#”><i class=”fab fa-twitter”></i></a>
+                        <a href=”#”><i class=”fab fa-instagram”></i></a>
                     </div>
                 </div>
             </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="assets/img/Team/Anele.jpg" alt="Luko">
+            <div class=”team-member”>
+                <div class=”member-image”>
+                    <img src=”assets/img/Team/Anele.jpg” alt=”Anele”>
                 </div>
-                <div class="member-info">
+                <div class=”member-info”>
                     <h3>Anele Gumede</h3>
                     <p>Software Developer</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    <div class=”social”>
+                        <a href=”#”><i class=”fab fa-facebook”></i></a>
+                        <a href=”#”><i class=”fab fa-twitter”></i></a>
+                        <a href=”#><i class=”fab fa-instagram”></i></a>
                     </div>
                 </div>
             </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="assets/img/Team/DIDI.jpg" alt="Didintle Mokgoro"> <!-- Replace with actual image path -->
+            <div class=”team-member”>
+                <div class=”member-image”>
+                    <img src=”assets/img/Team/DIDI.jpg” alt=”Didintle Mokgoro”> -- Replace with your own image path -->
                 </div>
-                <div class="member-info">
-                    <h3>Didintle Mokgoro</h3>
-                    <p>Co-founder and Software Engineer</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+<div class="member-info">
+<h3>Didintle Mokgoro</h3>
+<p>Co-founder and Software Engineer</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="assets/img/Team/Bless.jpg" alt="Blessing Ngozo"> <!-- Replace with actual image path -->
+<div class="team-member">
+<div class="member-image">
+<img src="assets/img/Team/Bless. jpg" alt="Blessing Ngozo"> <! -- Replace with a real image file path -->
                 </div>
-                <div class="member-info">
-                    <h3>Blessing Ngozo</h3>
-                    <p>Financial Trader and Marketing Strategist</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+<div class="member-info">
+<h3>Blessing Ngozo</h3>
+<p>Financial Trader and Marketing Strategist</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="assets/img/Team/Wesley1.jpg" alt="Wesley Hodges"> <!-- Replace with actual image path -->
-                </div>
-                <div class="member-info">
-                    <h3>Wesley Hodges</h3>
-                    <p>Financial Trader</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="assets/img/Team/THANDO.jpg" alt="Thando Sithole"> <!-- Replace with actual image path -->
-                </div>
-                <div class="member-info">
-                    <h3>Thando Sithole</h3>
-                    <p>Financial Trader</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-           
-    </section>
-    <!-- End / Content -->
-
-    <!-- Footer -->
+<div class="team-member">
+<div class="member-image">
+<img src="assets/img/Team/Wesley1. jpg" alt="Wesley Hodges"> <! <style>
+<!-- Create A Team CSS -->
+</style>
+<section class="home-our-people bg-2">
+<div class="container">
+<div class="row">
+<div class="col-lg-5  d-none  d-md-block">
+<div class="people-img">
+<img src="assets/img/our-people.jpg" alt="People">
+</div>
+</div>
+<div class="col-lg-7">
+<h2 class="people-title">Our Member:</h2>
+<div class="team-member">
+<div class="member-image">
+<img src="assets/img/Team/WhatsApp Image 2020-09-06 at 6.32.29 PM (7).jpeg" alt=""> <!-- Replace with actual image path -->
+</div>
+<div class="member-info">
+<h3>Pye Ayoung</h3>
+<p>CEO & Founder</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+<div class="team-member">
+<div class="member-image">
+<img src="assets/img/Team/WhatsApp Image 2020-09-06 at 6.32.29 PM (12).jpeg" alt=""> <!-- Replace with actual image path -->
+</div>
+<div class="member-info">
+<h3>Wesley Hodges</h3>
+<p>Financial Trader</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+<div class="team-member">
+<div class="member-image">
+<img src="assets/img/Team/THANDO.jpg" alt=""> <!-- Replace with actual image path -->
+</div>
+<div class="member-info">
+<h3>Thando Sithole</h3>
+<p>Financial Trader</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section> <! –-מחוץ לגוף –->
+<! –- Footer –->
     <footer class="footer">
         <div class="container">
           <div class="row">
@@ -245,9 +273,9 @@
             <div class="footer-col">
               <h4>get help</h4>
               <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Web design</a></li>
-                <li><a href="#">Software Development</a></li>
+                <li><a href="#">FAQ </a></li>
+                <li><a href="#">Web design </a></li>
+                <li><a href="#">Software Development </a></li>
                 <li><a href="#">Subscribtion services </a></li>
                 
               </ul>
@@ -267,7 +295,9 @@
                 <a href="https://www.facebook.com/share/1XJP2hrCru/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://x.com/eluceatcom?s=21"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.instagram.com/eluceatcom?igsh=MWdkamt0anV5Y2w4eA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/eluceat-eluceat-621a53347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/eluceat-eluceat-621a53347?                        <i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div> utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
@@ -276,41 +306,41 @@
     <!-- End / Footer -->
 
     <!-- Vendors -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
-    <script src="GSAP/esm/all.js"></script>
-    <script src="../BDF/assets/js/gsap.js" defer></script>
-    <script type="text/javascript" src="assets/vendors/_jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
-    <script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
-    <script type="text/javascript" src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
-    <script type="text/javascript" src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="assets/vendors/masonry-layout/masonry.pkgd.js"></script>
-    <script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
-    <script type="text/javascript" src="assets/vendors/menu/menu.js"></script>
-    <script type="text/javascript" src="assets/vendors/jquery.countTo/jquery.countTo.min.js"></script>
-    <script type="text/javascript" src="assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
-    <script type="text/javascript" src="assets/vendors/tabs/awe-tabs.js"></script>
-    <script type="text/javascript" src="assets/vendors/wow/wow.js"></script>
-    <script type="text/javascript" src="assets/vendors/jquery.appear/jquery.appear.js"></script>
-    <script type="text/javascript" src="assets/vendors/waterpipe/waterpipe.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+<script src="GSAP/esm/all. js"></script>
+<script src="../BDF/assets/js/gsap. js" defer></script>
+<script type="text/javascript" src="assets/vendors/_jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
+<script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
+<script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
+<script type="text/javascript" src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
+<script type="text/javascript" src="assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
+<script type="text/javascript" src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="assets/vendors/masonry-layout/masonry.pkgd.js"></script>
+<script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
+<script type="text/javascript" src="assets/vendors/menu/menu.js"></script>
+<script type="text/javascript" src="assets/vendors/jquery.countTo/jquery.countTo.min.js"></script>
+<script type="text/javascript" src="assets/vendors/jquery.waypoints/jquery. waypoints.min.js"></script>
+<script type="text/javascript" src="assets/vendors/tabs/awe-tabs.js"></script>
+<script type="text/javascript" src="assets/vendors/wow/wow.js"></script>
+<script type="text/javascript" src="assets/vendors/jquery.appear/jquery.appear.js"></script>
+<script type="text/javascript" src="assets/vendors/waterpipe/waterpipe.js"></script>
     <!-- App -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/main. js"></script>
 
     <script>
-        // GSAP Animation for Team Members
-        const teamMembers = document.querySelectorAll('.team-member');
-        teamMembers.forEach((member, index) => {
+// GSAP Animation Team Members
+const teamMembers = document. querySelectorAll('. team-member');
+teamMembers. forEach((member, index) => {
             gsap.to(member, {
                 opacity: 1,
                 y: 0,
-                duration: 0.5,
-                delay: index * 0.1, // Delay each member's animation
-                ease: "power2.out" // Smoother easing
+duration: 0.5,
+delay: index * 0.1, // Delay of each member's animation
+ease: "power2. out" // Smoother easing
             });
         });
     </script>
 </body>
-</html>
+</html> 
