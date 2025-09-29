@@ -1,58 +1,104 @@
-/*--------------------------------------------------------------------------------
-	# Designed & coded by Styzey
-----------------------------------------------------------------------------------
+/*
+* General styling and resets for consistent rendering.
+*/
 
-	1. base
-	2. button
-	3. form-item
-	4. button
-	5. contact
-	6. countTo
-	7. form_item
-	8. grid-css
-	9. portfolio
-	10. portfolio
-	11. post
-	12. pricing_01
-	13. progress
-	14. quote
-	15. service_02
-	16. core_smoky
-	17. socialicon
-	18. swiper
-	19. tabs
-	20. team
-	21. title
-	22. video
-	23. footer
-	24. header-01
-	25. hero
-	26. Layout
-	27. Grid Boostrap 
-	28. Font size
-	29. Margin Padding
-	30. Swiper
-	31. Popup
-	32. Button
-    33. carosel
+/* Use a border-box model for intuitive sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
---------------------------------------------------------------------------------*/
+/* Remove default margins from the body */
+body {
+    margin: 0;
+}
 
-/* 1. base
---------------------------------------------------------------------------------*/
-/* Apply box-sizing to all elements */
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem; /* Adds a bit of space below headings */
+    font-weight: bold;
+}
 
+p {
+    margin-top: 0;
+    margin-bottom: 1rem; /* Adds space below paragraphs */
+}
 
-/* Base styles for larger screens */
-/* Base styles for larger screens */
-/* Base styles */
-/* Base font size */
+a {
+    color: #007bff; /* A standard blue for links */
+    text-decoration: none; /* Remove underlines for a cleaner look */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover for interaction feedback */
+}
+
+/* Basic container layout */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 1rem;
+}
+
+/* Hero Section */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background */
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    transition: color 0.3s ease, background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Utility classes for text alignment */
+.text-center {
+    text-align: center;
 }
 
 .hero__content {
@@ -1974,7 +2020,7 @@ ul {
     position: relative;
 }
 
-.pricing-01__+27691293465 {
+.pricing-01__27691293465 {
     border-bottom: 1px solid #f1f1f1;
     margin-left: 30px;
     margin-right: 30px;
@@ -3049,115 +3095,98 @@ h1 {
         transform: rotate(45deg);
     }
 
-    .navbar-toggle.active span:nth-child(2) {
-        opacity: 0;
-        left: -60px;
-    }
-
-    .navbar-toggle.active span:nth-child(3) {
-        top: 10px;
-        transform: rotate(-45deg);
-    }
+ .navbar-toggle.active span:nth-child(2) {
+ opacity: 0;
+ left: -60px;
 }
-
+.navbar-toggle.active span:nth-child(3) {
+ top: 10px;
+ transform: rotate(-45deg);
+}
+}
 /* 25. hero
 --------------------------------------------------------------------------------*/
-
 .hero {
-    background: #000;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    z-index: 9;
+ background: #000;
+ text-align: center;
+ overflow: hidden;
+ position: relative;
+ z-index: 9;
 }
-
 .hero__wrapper .a-btn {
-    color: #fff;
+ color: #fff;
 }
-
 .hero__wrapper .a-btn.btn-first {
-    background: #049f40;
-    border-color: #049f40;
+ background: #049f40;
+ border-color: #049f40;
 }
-
 .hero__wrapper .a-btn.btn-first:hover {
-    background: #fff;
-    border-color: #fff;
-    color: #000;
+ background: #fff;
+ border-color: #fff;
+ color: #000;
 }
-
 .hero__wrapper .a-btn.btn-first:hover:before {
-    background: #fff;
+ background: #fff;
 }
-
 .hero__title {
-    font-size: 30px;
-    font-weight: 400;
-    color: #fff;
-    margin-top: 0;
-    margin-bottom: 25px;
+ font-size: 30px;
+ font-weight: 400;
+ color: #fff;
+ margin-top: 0;
+ margin-bottom: 25px;
 }
-
 @media (min-width: 320px) {
-    .hero__title {
-        font-size: calc(1.13636vw + 26.36364px);
-    }
+.hero__title {
+ font-size: calc(1.13636vw + 26.36364px);
 }
-
+}
 @media (min-width: 1200px) {
-    .hero__title {
-        font-size: 40px;
-    }
+.hero__title {
+ font-size: 40px;
 }
-
+}
 @media (max-width: 767px) {
-    .hero__title {
-        margin-top: 80px;
-    }
+.hero__title {
+ margin-top: 80px;
 }
-
+}
 .hero__title span {
-    color: #049f40;
+ color: #049f40;
 }
-
 .hero__title .typing__module {
-    display: inline-block;
+ display: inline-block;
 }
-
 .hero__text {
-    font-size: 16px;
-    color: #eee;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0 15%;
-    margin-top: 20px;
+ font-size: 16px;
+ color: #eee;
+ font-size: 16px;
+ font-weight: 400;
+ margin: 0 15%;
+ margin-top: 20px;
 }
-
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
+ 0%, 100% {
+ transform: translateY(0);
+ }
+ 
+ 50% {
+ transform: translateY(-20px);
+ }
 }
-
 @media (min-width: 1201px) {
-    .hero {
-        height: 100vh;
-        padding: 0;
-    }
-
-    .hero__wrapper {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: 2;
-        width: 100%;
-        transform: translateY(-50%);
-    }
+.hero {
+ height: 100vh;
+ padding: 0;
 }
+.hero__wrapper {
+ position: absolute;
+ top: 50%;
+ left: 0;
+ z-index: 2;
+ width: 100%;
+ transform: translateY(-50%);
+}
+
 
 /* 26. Layout
 --------------------------------------------------------------------------------*/
@@ -3726,7 +3755,6 @@ left: -400px;
     }
 }
 
-/* Add these styles to your main.css */
 
 .auth-container {
     min-height: 100vh;
@@ -4035,5 +4063,9 @@ left: -400px;
     
     .profile-circle span {
         display: none;
+    }
+        .profile-dropdown {
+            right: 0;
+        }
     }
 }
