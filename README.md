@@ -93,3 +93,11 @@ Font Awesome
 Bootstrap Grid
 Google Fonts
 jQuery
+
+## Screenshots
+
+![Screenshot 1](assets/img/screenshots/screenshot1.png)
+![Screenshot 2](assets/img/screenshots/screenshot2.png)
+![Screenshot 3](assets/img/screenshots/screenshot3.png)
+![Screenshot 4](assets/img/screenshots/screenshot4.png)
+![Screenshot 5](assets/img/screenshots/screenshot5.png)
