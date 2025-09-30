@@ -64,17 +64,27 @@ This document serves as **Part 1** of the full Website Project Proposal. It incl
 ## Changelog
 - **[v1.0 | 2025-08-26]** Initial draft of project proposal completed (Part 1).  
 - Future changelog entries will track improvements in design, technical build, and content.  
-
+Contact.css updated [2025-09-29]
+Main.css updated 
+Footer.csss updated 
+images added to home index and contact web pages 
 ---
-
 ## References
-- Eluceat.com (Official Website)  
-- Nielsen Norman Group – *UX Design Principles*  
-- Google Design Guidelines 
-- Google Search Console 
-- The Independent Institute of Education VCW (2025). *Project Proposal Guidelines*.  
-- Academic articles on web development and project planning.
-Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+
+- Eluceat. (2025). *Official Website*. https://eluceat.com  
+- Nielsen Norman Group. (n.d.). *UX Design Principles*. https://www.nngroup.com/articles/definition-user-experience/  
+- Google. (n.d.). *Material Design Guidelines*. https://material.io/design  
+- Google. (n.d.). *Search Console Help*. https://support.google.com/webmasters/answer/9128668?hl=en  
+- The Independent Institute of Education VCW. (2025). *Project Proposal Guidelines*.  
+- Various authors. (n.d.). *Academic articles on web development and project planning*. [https://advtechonline.sharepoint.com/:w:/r/sites/TertiaryStudents/_layouts/15/Doc.aspx?sourcedoc=%7B82ADAD40-E296-4434-B313-829A30BBE94D%7D&file=WEDE5020POE.docx&action=default&mobileredirect=true]  
+- Mozilla Developer Network (MDN). (n.d.). *HTML Reference*. https://developer.mozilla.org/en-US/docs/Web/HTML  
+- Bootstrap. (n.d.). *Bootstrap Grid System Documentation*. https://getbootstrap.com/docs/5.0/layout/grid/  
+- Google Fonts. (n.d.). *Google Fonts*. https://fonts.google.com/  
+- jQuery Foundation. (n.d.). *jQuery Documentation*. https://api.jquery.com/  
+
+### Attributions
+
+- Font Awesome 4.7.0 by Dave Gandy. (n.d.). https://fontawesome.io  
  
  Citations:
 
@@ -83,3 +93,11 @@ Font Awesome
 Bootstrap Grid
 Google Fonts
 jQuery
+
+## Screenshots
+
+![Screenshot 1](assets/img/screenshots/screenshot1.png)
+![Screenshot 2](assets/img/screenshots/screenshot2.png)
+![Screenshot 3](assets/img/screenshots/screenshot3.png)
+![Screenshot 4](assets/img/screenshots/screenshot4.png)
+![Screenshot 5](assets/img/screenshots/screenshot5.png)
