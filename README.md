@@ -82,6 +82,14 @@ images added to home index and contact web pages
 - Google Fonts. (n.d.). *Google Fonts*. https://fonts.google.com/  
 - jQuery Foundation. (n.d.). *jQuery Documentation*. https://api.jquery.com/  
 
+Project files of interest
+- enquiry.html — main new enquiry page (root)
+- assets/css/enquiry.css — shared Enquiry styles (new)
+- assets/css/main.css — existing project stylesheet (used by pages)
+- assets/css/footer.css — existing footer styles
+- index.html — main page; used as header/footer source
+- scripts/add-enquiry-to-all-html.ps1 — script to add stylesheet link and Enquiry menu to every .html
+
 ### Attributions
 
 - Font Awesome 4.7.0 by Dave Gandy. (n.d.). https://fontawesome.io  
@@ -101,3 +109,39 @@ jQuery
 ![Screenshot 3](assets/img/screenshots/screenshot3.png)
 ![Screenshot 4](assets/img/screenshots/screenshot4.png)
 ![Screenshot 5](assets/img/screenshots/screenshot5.png)
+
+# Sub-Website — Eluceat
+
+What I added / changed (high-level)
+- Added enquiry.html — interactive enquiry form with client-side validation and instant estimate/availability responses.
+- Unified header and footer across pages (index-style header/footer copied to other .html files).
+- Added a shared stylesheet for Enquiry styling: `assets/css/enquiry.css`.
+- Added simple smooth scroll helper (used by main site).
+- Added PowerShell helper scripts to apply the Enquiry link and to sync header/footer across all HTML files.
+- Created backups (.bak) when scripts modify files.
+
+Files created
+- enquiry.html
+- assets/css/enquiry.css
+- scripts/add-enquiry-to-all-html.ps1
+- scripts/add-enquiry-link.ps1 (older variant)
+- scripts/sync-header-footer.ps1
+
+Files modified
+- index.html (menu updated, Enquiry tab added)
+- other .html files in the project (header/footer/menu inserted by the sync script if you ran it)
+
+# Changelog
+
+All notable changes to this project are documented here.
+
+## [Unreleased] — 2025-11-03
+### Added
+- enquiry.html — full enquiry form with validation, dynamic fields (service/product/volunteer/sponsor), and client-side processing that returns estimated cost/availability.
+Sitemap
+Robot txt file 
+### Changed
+- index.html — added "Enquiry" menu item/tab and ensured header/footer match the new design.
+- All project HTML files — optionally updated header navigation and footer (if scripts were run).
+- enquiry.html UI — humanised copy, better labels, placeholders, hints and accessible response UI.
+

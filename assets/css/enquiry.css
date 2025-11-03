@@ -1,0 +1,44 @@
+/* Colors and small UI rules for Enquiry tab/button/footer link to match enquiry.html */
+a[href="enquiry.html"],
+.onepage-menu a[href="enquiry.html"],
+.footer-col a[href="enquiry.html"] {
+  color: forestgreen !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a[href="enquiry.html"]:hover,
+.onepage-menu a[href="enquiry.html"]:hover,
+.footer-col a[href="enquiry.html"]:hover {
+  color: #0b6623 !important;
+}
+
+/* Tab nav: highlight the Enquiry tab */
+.ac-tab__nav li a[href="enquiry.html"] i.fa-envelope,
+.ac-tab__nav li a[href="enquiry.html"] .ac-tab__title {
+  color: forestgreen !important;
+}
+
+/* Button styles for any element linking to enquiry */
+.a-btn.enquiry,
+a.enquiry-btn,
+button.enquiry-btn {
+  background: forestgreen !important;
+  color: #fff !important;
+  border-radius: 4px;
+  padding: 8px 14px;
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+}
+
+/* Ensure footer link stands out on dark footers */
+.footer-col a[href="enquiry.html"] {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 768px){
+  .onepage-menu a[href="enquiry.html"] { padding-left: 6px; padding-right:6px; }
+}

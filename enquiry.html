@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Enquiry — Eluceat</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/jpeg" href="favicon/favicon.jpg">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/enquiry.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+      body {
+        background-image: linear-gradient(rgba(10,20,10,0.35), rgba(10,20,10,0.35)), url("assets/images/enquiry-bg.jpg");
+        background-size: cover;
+        background-position: center center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+        margin: 0;
+      }
+      .wrap {
+        max-width:920px;
+        margin:28px auto;
+        background: rgba(255,255,255,0.95);
+        padding:28px;
+        border-radius:8px;
+        box-shadow:0 6px 20px rgba(0,0,0,.18);
+        backdrop-filter: blur(4px);
+      }
+      h1{margin:0 0 12px;color:forestgreen}
+      label{display:block;margin:12px 0 6px;font-weight:600}
+      input[type="text"], input[type="email"], input[type="number"], select, textarea, input[type="date"]{
+        width:100%; padding:10px; border:1px solid #e6e6e6; border-radius:4px; box-sizing:border-box;
+      }
+      .hint { font-size:13px;color:#666;margin-top:6px }
+      .result {margin-top:18px;padding:14px;border-radius:6px;background:#f0f9f6;border:1px solid #dff3ea}
+      .error { color:#b00; font-size:13px; margin-top:6px; }
+      .field-error { border-color: #b00 !important; box-shadow: 0 0 0 3px rgba(176,0,0,0.06); }
+      .btn-row { margin-top:16px; display:flex; gap:12px; align-items:center; }
+      .spinner { width:18px; height:18px; border:3px solid rgba(0,0,0,0.12); border-top-color:forestgreen; border-radius:50%; animation:spin .9s linear infinite; display:inline-block; vertical-align:middle; }
+      @keyframes spin { to { transform:rotate(360deg); } }
+      .sr-only { position:absolute !important; left:-9999px !important; top:auto !important; width:1px !important; height:1px !important; overflow:hidden !important; }
+    </style>
+  </head>
+
+  <body>
+    <header class="header header--fixed">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo"><a href="index.html" style="color: forestgreen;">Eluceat</a></div>
+          <div class="header__menu">
+            <nav class="onepage-nav" aria-label="Main navigation">
+              <ul class="onepage-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#id-3">Services</a></li>
+                <li><a href="#id-4">Work</a></li>
+                <li><a href="Blog.html">Data</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Team.html">Team</a></li>
+                <li class="current-menu-item"><a href="enquiry.html">Enquiry</a></li>
+              </ul>
+            </nav>
+            <div class="navbar-toggle" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap" role="main" style="margin-top:110px;">
+        <h1>Hi — how can we help?</h1>
+        <p class="hint">Briefly tell us what you need (service, product, volunteering or sponsorship). We’ll give a quick estimate and explain the next steps.</p>
+
+        <form id="enquiryForm" novalidate>
+          <div>
+            <label for="name">Your name *</label>
+            <input id="name" name="name" type="text" required minlength="2" placeholder="Jane Doe" aria-describedby="nameHint" />
+            <div id="nameError" class="error" aria-live="polite"></div>
+            <div id="nameHint" class="hint">We’ll use this to address our reply.</div>
+          </div>
+
+          <div>
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" aria-describedby="emailHint" />
+            <div id="emailError" class="error" aria-live="polite"></div>
+            <div id="emailHint" class="hint">We’ll reply here — we won’t share it.</div>
+          </div>
+
+          <div>
+            <label for="type">What is this about? *</label>
+            <select id="type" name="type" required aria-describedby="typeHint">
+              <option value="">Choose…</option>
+              <option value="service">A service</option>
+              <option value="product">A product</option>
+              <option value="volunteer">Volunteering</option>
+              <option value="sponsor">Sponsorship</option>
+            </select>
+            <div id="typeError" class="error" aria-live="polite"></div>
+            <div id="typeHint" class="hint">Pick the closest option so we can tailor our reply.</div>
+          </div>
+
+          <div id="serviceFields" style="display:none;">
+            <label for="serviceSelect">Which service?</label>
+            <select id="serviceSelect">
+              <option value="">Choose a service...</option>
+              <option value="web_design">Web Design</option>
+              <option value="web_dev">Web Development</option>
+              <option value="branding">Brand & Identity</option>
+              <option value="security">Security Optimization</option>
+              <option value="marketing">Online Marketing</option>
+            </select>
+            <div id="serviceError" class="error" aria-live="polite"></div>
+            <label for="startDate">Preferred start (optional)</label>
+            <input id="startDate" type="date" />
+            <div class="hint">If you have a deadline, tell us and we’ll prioritise if possible.</div>
+          </div>
+
+          <div id="productFields" style="display:none;">
+            <label for="productDesc">Product details</label>
+            <input id="productDesc" type="text" placeholder="e.g. 10 x promo t-shirts, blue, size M" />
+            <label for="quantity">Quantity</label>
+            <input id="quantity" type="number" min="1" value="1" />
+            <div id="productError" class="error" aria-live="polite"></div>
+            <div class="hint">More detail = more accurate estimate.</div>
+          </div>
+
+          <div id="volunteerFields" style="display:none;">
+            <label for="availability">Availability (days / week)</label>
+            <input id="availability" type="number" min="0" max="7" value="2" />
+            <div id="volunteerError" class="error" aria-live="polite"></div>
+            <div class="hint">This helps us match roles and times.</div>
+          </div>
+
+          <div id="sponsorFields" style="display:none;">
+            <label for="tier">Sponsorship tier</label>
+            <select id="tier">
+              <option value="">Select tier...</option>
+              <option value="bronze">Bronze — R5,000</option>
+              <option value="silver">Silver — R15,000</option>
+              <option value="gold">Gold — R50,000</option>
+              <option value="custom">Custom</option>
+            </select>
+            <div id="sponsorError" class="error" aria-live="polite"></div>
+            <div class="hint">Pick a tier so we can prepare matching benefits.</div>
+          </div>
+
+          <div>
+            <label for="message">Message (optional)</label>
+            <textarea id="message" rows="4" placeholder="Anything else we should know?" ></textarea>
+          </div>
+
+          <div style="margin-top:14px;">
+            <input id="consent" type="checkbox" required /> <label for="consent" style="display:inline;font-weight:400">Yes — you may contact me about this enquiry *</label>
+            <div id="consentError" class="error" aria-live="polite"></div>
+            <div class="hint">We only use this to reply and arrange next steps.</div>
+          </div>
+
+          <div class="btn-row">
+            <button id="submitBtn" class="a-btn enquiry-btn" type="submit" aria-live="polite">
+              <span id="btnText">Send request</span>
+              <span id="btnSpinner" class="spinner" style="display:none;margin-left:8px"></span>
+            </button>
+            <div id="formError" class="error" aria-live="polite"></div>
+          </div>
+
+          <div id="response" class="result" style="display:none" role="status" aria-live="polite" tabindex="-1"></div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer" style="background:#111;color:#ddd;padding:36px 0;margin-top:28px;">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col" style="flex:1;min-width:200px;margin-bottom:18px;">
+            <h4 style="color:#fff">company</h4>
+            <ul style="list-style:none;padding:0;margin:0">
+              <li><a href="enquiry.html" style="color:forestgreen">Enquiry</a></li>
+              <li><a href="#" style="color:#ddd">about us</a></li>
+              <li><a href="#" style="color:#ddd">our services</a></li>
+              <li><a href="#" style="color:#ddd">privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col" style="flex:1;min-width:200px;margin-bottom:18px;">
+            <h4 style="color:#fff">contact</h4>
+            <ul style="list-style:none;padding:0;margin:0">
+              <li style="color:#ddd">Email: info@eluceat.example</li>
+              <li style="color:#ddd">Phone: +27 11 000 0000</li>
+            </ul>
+          </div>
+          <div class="footer-col" style="flex:1;min-width:200px;margin-bottom:18px;">
+            <h4 style="color:#fff">follow</h4>
+            <ul style="list-style:none;padding:0;margin:0">
+              <li><a href="#" style="color:#ddd">Twitter</a></li>
+              <li><a href="#" style="color:#ddd">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:18px;color:#777">© <span id="year"></span> Eluceat</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      (function(){
+        const form = document.getElementById('enquiryForm');
+        const type = document.getElementById('type');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const response = document.getElementById('response');
+        const formError = document.getElementById('formError');
+
+        const blocks = {
+          service: document.getElementById('serviceFields'),
+          product: document.getElementById('productFields'),
+          volunteer: document.getElementById('volunteerFields'),
+          sponsor: document.getElementById('sponsorFields')
+        };
+
+        function hideAll(){ Object.values(blocks).forEach(b=>b && (b.style.display='none')); }
+        type.addEventListener('change', e=>{
+          hideAll();
+          clearFieldError('type');
+          const v = e.target.value;
+          if (blocks[v]) blocks[v].style.display = 'block';
+        });
+
+        function setFieldError(id, message){
+          const el = document.getElementById(id);
+          const err = document.getElementById(id + 'Error');
+          if (el) el.classList.add('field-error');
+          if (err) err.textContent = message || '';
+        }
+        function clearFieldError(id){
+          const el = document.getElementById(id);
+          const err = document.getElementById(id + 'Error');
+          if (el) el.classList.remove('field-error');
+          if (err) err.textContent = '';
+        }
+        function clearAllErrors(){
+          ['name','email','type','service','product','volunteer','sponsor','consent'].forEach(clearFieldError);
+          formError.textContent = '';
+        }
+        function disableSubmit(state){
+          submitBtn.disabled = state;
+          btnSpinner.style.display = state ? 'inline-block' : 'none';
+        }
+
+        const serviceRates = {
+          web_design: {label:'Web Design', base: 8000},
+          web_dev: {label:'Web Development', base:12000},
+          branding: {label:'Brand & Identity', base:7000},
+          security: {label:'Security Optimization', base:6000},
+          marketing: {label:'Online Marketing', base:5000}
+        };
+        const productCatalog = { defaultUnit: 450 };
+        const sponsorTiers = {
+          bronze: {label:'Bronze', fee:5000, availability:'Limited (2 slots/month)'},
+          silver: {label:'Silver', fee:15000, availability:'Moderate (5 slots/month)'},
+          gold: {label:'Gold', fee:50000, availability:'Subject to approval (1-2 slots/month)'},
+          custom: {label:'Custom', fee:null, availability:'Contact required'}
+        };
+
+        function formatCurrency(n){ return 'R' + Number(n).toLocaleString(); }
+        function escapeHtml(s){ if (!s) return ''; return s.replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]; }); }
+        function nextMonthlyIntake(){ const now = new Date(); const next = new Date(now.getFullYear(), now.getMonth() + 1, 1); return next.toLocaleDateString(); }
+
+        function validate(){
+          clearAllErrors();
+          let ok = true;
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const t = type.value;
+          const consent = document.getElementById('consent').checked;
+
+          if (name.length < 2) { setFieldError('name', 'Please enter your name.'); ok = false; }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setFieldError('email', 'Please enter a valid email.'); ok = false; }
+          if (!t) { setFieldError('type', 'Please choose one.'); ok = false; }
+
+          if (t === 'service') {
+            const svc = document.getElementById('serviceSelect').value;
+            if (!svc) { setFieldError('service', 'Please pick a service.'); ok = false; }
+          }
+          if (t === 'product') {
+            const desc = document.getElementById('productDesc').value.trim();
+            if (!desc) { setFieldError('product', 'Please describe the product.'); ok = false; }
+          }
+          if (t === 'volunteer') {
+            const days = Number(document.getElementById('availability').value);
+            if (isNaN(days) || days < 0) { setFieldError('volunteer', 'Enter days per week.'); ok = false; }
+          }
+          if (t === 'sponsor') {
+            const tier = document.getElementById('tier').value;
+            if (!tier) { setFieldError('sponsor', 'Please select a sponsorship tier.'); ok = false; }
+          }
+          if (!consent) { setFieldError('consent', 'Please allow us to contact you.'); ok = false; }
+
+          return ok;
+        }
+
+        async function submitAjax(payload){
+          const endpoint = '/api/enquiry';
+          try {
+            const res = await fetch(endpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+              credentials: 'same-origin'
+            });
+            if (!res.ok) {
+              let txt = await res.text();
+              throw new Error(txt || `Server returned ${res.status}`);
+            }
+            const json = await res.json();
+            return { fromServer: true, payload: json };
+          } catch (err) {
+            throw err;
+          }
+        }
+
+        function buildLocalResponse(values){
+          let html = '<strong>Thanks, ' + (escapeHtml(values.name) || 'friend') + ' — we got it!</strong>';
+          html += `<div class="hint" style="margin-top:8px">We’ll be in touch within 1–2 business days.</div><br>`;
+
+          if (values.type === 'service'){
+            const svcKey = document.getElementById('serviceSelect').value;
+            const svc = serviceRates[svcKey];
+            const start = document.getElementById('startDate').value || 'flexible';
+            const estimated = Math.round(svc.base * (1 + (Math.random()*0.25)));
+            html += '<div><strong>Service:</strong> '+svc.label+'<br>';
+            html += '<strong>Preferred start:</strong> '+escapeHtml(start)+'<br>';
+            html += '<strong>Estimate:</strong> '+formatCurrency(estimated)+'</div>';
+          } else if (values.type === 'product'){
+            const desc = document.getElementById('productDesc').value.trim();
+            const qty = Math.max(1, parseInt(document.getElementById('quantity').value,10) || 1);
+            const unit = productCatalog.defaultUnit;
+            const subtotal = unit * qty;
+            const shipping = Math.round(subtotal * 0.08);
+            html += '<div><strong>Product:</strong> '+escapeHtml(desc || 'Item')+'<br>';
+            html += '<strong>Quantity:</strong> '+qty+'<br>';
+            html += '<strong>Estimate:</strong> '+formatCurrency(subtotal + shipping)+'</div>';
+          } else if (values.type === 'volunteer'){
+            const days = parseInt(document.getElementById('availability').value,10) || 0;
+            const intakeDate = nextMonthlyIntake();
+            html += '<div><strong>Available:</strong> '+days+' day(s) / week<br>';
+            html += '<strong>Next intake:</strong> '+intakeDate+'</div>';
+          } else if (values.type === 'sponsor'){
+            const tier = document.getElementById('tier').value;
+            const info = sponsorTiers[tier];
+            html += '<div><strong>Tier:</strong> '+info.label+'<br>';
+            if (info.fee) html += '<strong>Fee:</strong> '+formatCurrency(info.fee)+'</div>';
+          } else {
+            html += '<div>We will reply with next steps shortly.</div>';
+          }
+
+          const message = document.getElementById('message').value.trim();
+          if (message) html += '<hr><strong>Your note:</strong><div style="white-space:pre-wrap">'+escapeHtml(message)+'</div>';
+          html += '<p class="hint">If you need a faster reply, mention the best time to call in your message.</p>';
+          return html;
+        }
+
+        form.addEventListener('submit', async function(ev){
+          ev.preventDefault();
+          response.style.display = 'none';
+          formError.textContent = '';
+          if (!validate()){
+            formError.textContent = 'Please fix the highlighted fields.';
+            return;
+          }
+
+          const payload = {
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            type: type.value,
+            message: document.getElementById('message').value.trim(),
+            meta: { submittedAt: new Date().toISOString(), path: location.pathname }
+          };
+
+          if (payload.type === 'service') {
+            payload.service = document.getElementById('serviceSelect').value;
+            payload.startDate = document.getElementById('startDate').value || null;
+          }
+          if (payload.type === 'product') {
+            payload.productDesc = document.getElementById('productDesc').value.trim();
+            payload.quantity = Number(document.getElementById('quantity').value) || 1;
+          }
+          if (payload.type === 'volunteer') {
+            payload.availability = Number(document.getElementById('availability').value) || 0;
+          }
+          if (payload.type === 'sponsor') {
+            payload.tier = document.getElementById('tier').value;
+          }
+
+          disableSubmit(true);
+          btnText.textContent = 'Sending…';
+          formError.textContent = '';
+
+          try {
+            const result = await submitAjax(payload);
+            if (result && result.fromServer && result.payload) {
+              const body = result.payload;
+              if (body.success && body.message) {
+                response.innerHTML = '<strong>Thanks —</strong><div class="hint" style="margin-top:8px">'+escapeHtml(body.message)+'</div>';
+              } else if (body.html) {
+                response.innerHTML = body.html;
+              } else {
+                response.innerHTML = buildLocalResponse(payload);
+              }
+            } else {
+              response.innerHTML = buildLocalResponse(payload);
+            }
+          } catch (err) {
+            console.warn('AJAX submit failed:', err);
+            response.innerHTML = '<strong>We couldn’t reach our server right now.</strong><div class="hint" style="margin-top:8px">Below is a quick local summary. If you don’t hear from us, email info@eluceat.example.</div><br>' + buildLocalResponse(payload);
+            formError.textContent = 'Network or server error.';
+          } finally {
+            disableSubmit(false);
+            btnText.textContent = 'Send request';
+            response.style.display = 'block';
+            response.focus();
+          }
+        });
+
+        ['name','email','serviceSelect','productDesc','quantity','availability','tier','startDate'].forEach(id=>{
+          const el = document.getElementById(id);
+          if (!el) return;
+          el.addEventListener('input', ()=> {
+            const key = id === 'serviceSelect' ? 'service' : id === 'productDesc' ? 'product' : id;
+            clearFieldError(key);
+          });
+        });
+
+      })();
+    </script>
+  </body>
+</html>
